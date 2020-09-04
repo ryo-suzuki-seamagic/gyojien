@@ -1,0 +1,20 @@
+<header class="maln-page-herder">
+  <%# ロゴ %>
+  <div class="herder-logo">
+    <h1>ロゴ</h1>
+  </div>
+  <%# ログイン。マイページボタン %>
+  <div class="header-rigth">
+    <ul class="list-rigth">
+      <%# <% if user_signed_in?%>
+        <li><%= link_to 'ユーザー名', "#", class: "user-nickname"%></li>
+        <li><%= link_to 'ログアウト', "#", class: "logout" %></li>
+      <%# <% else%> 
+        <li><%= link_to 'ログイン', "#", class: "rogin" %></li>
+        <li><%= link_to '新規登録',"#", class: "sign-in"%></li>
+      <%# <% end%> 
+    </ul>
+  </div>
+
+
+</header>

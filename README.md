@@ -8,8 +8,8 @@
 | nickname  | string | null: false |
 | email     | string | null: false |
 | location  | string | null: false |
-| firstname | string | null: false |
-| lastname  | string | null: false |
+| first_name | string | null: false |
+| last_name  | string | null: false |
 | password  | string | null: false |
 |           |        |             |
 
