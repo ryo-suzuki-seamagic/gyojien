@@ -13,7 +13,7 @@
 | password  | string | null: false |
 |           |        |             |
 
-### Association
+## Association
 
 - has_many :fishcatchs
 - has_many :fishcathccomenst
@@ -32,10 +32,11 @@
 | text           | string  | nulll:false |
 |                |         |             |
 
-### Association
+## Association
 
 - belongs_to :user
 - has_many :fishcatchcomments
+
 ## fishcatchcommentテーブル
 
 | Coliumn   | Type       | Options                      |

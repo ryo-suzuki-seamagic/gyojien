@@ -1,0 +1,36 @@
+.main-page-header{
+  background-color: aqua;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+ 
+ 
+}
+
+
+.header-left{
+  width: 35%;
+  height: 100px;
+}
+
+.center-header{
+  width:45%;
+  height: 100px;
+  display: flex;
+  font-size: 20px;
+  margin-top: 60px;
+ }
+ 
+ .header-list{
+  margin: 0 5px 0 5px;
+  
+}
+
+ 
+.header-rigth{
+ width: 20%;
+ height: 100px;
+}
+
+

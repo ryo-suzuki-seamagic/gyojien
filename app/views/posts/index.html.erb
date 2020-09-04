@@ -7,8 +7,9 @@
  <div class="fish-catch-pages">
   <h1 class="list-title">釣果一覧</h1>
     <li class="content-list">
-      
-     
+      <h3 class="content-title">釣果タイトル </h3>
+        <%= image_tag "sample-shake.jpg", class: "content-img"%>
+       <h5 class="content-user-name"> お名前</h5>
     </li>
     
    
@@ -17,10 +18,22 @@
  <%# レシピ一覧 %>
  <div class="recipe-pages">
   <h1 class="list-title">料理一覧</h1>
- <div>
+  <li class="content-list">
+      <h3 class="content-title">レシピタイトル</h3>
+          <%= image_tag "sample-recipe.jpg", class: "content-img"%>
+          <h5 class="content-user-name"> お名前</h5>   
+  </li>
+ </div>
  <%# コラム一覧 %>
  <div class="colimn-pages">
   <h1 class="list-title">コラム一覧</h1>
+  <li class="content-list">
+      <h3 class="content-title"> コラムタイトル</h3>
+       <div class="content-img">
+       </div>
+       <div class="content-user-name">
+       </div>
+    </li>
  </div>
 
 <%= render "shared/footer"%>
