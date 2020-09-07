@@ -1,36 +1,76 @@
+
 .main-page-header{
   background-color: aqua;
-  height: 100px;
-  width: 100%;
+  height: 50px;
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
- 
- 
+  margin-top: 0;
+  position: fixed;
+}
+
+.logo{
+  font-size: 30px;
+  padding-left: 30px;
+  
 }
 
 
 .header-left{
   width: 35%;
-  height: 100px;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
 .center-header{
-  width:45%;
-  height: 100px;
+  width:65%;
   display: flex;
   font-size: 20px;
-  margin-top: 60px;
+  /* margin-top: 20px; */
  }
  
- .header-list{
-  margin: 0 5px 0 5px;
+ .header-list {
+  /* margin: 0 35px 0 35px; */
+  padding: 0 70px;
+  font-size: 30px;
+  text-decoration: none;
+  border:1px solid blue ;
+  text-align: center;
+  justify-content: center;
   
 }
 
  
 .header-rigth{
- width: 20%;
- height: 100px;
+ 
+  width: 25vw;
+  height: 100%;
+
 }
 
+.list-rigth{
+  display: flex;
+  
+}
 
+.rogin{
+  border:1px solid blue ;
+  font-size: 30px;
+  height: 100%;
+  text-decoration: none;
+  width: 50%;
+  /* padding: 30px 20px 30px 20px; */
+
+
+  
+}
+
+.sign-in{
+  border:1px solid blue ;
+  font-size: 30px;
+  height: 100%;
+  text-decoration: none;
+  width: 50%;
+  /* padding: 30px 20px 30px 20px; */
+
+}

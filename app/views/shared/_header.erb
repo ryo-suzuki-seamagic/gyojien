@@ -1,26 +1,26 @@
 <header class="main-page-header">
-  <%# ロゴ %>
+ 
 <%# <div class="header-list"> %>
   <div class="header-left">
-    <h1 class="logo">ロゴ</h1>
+    <h1 class="logo">魚辞苑ロゴ予定地</h1>
   </div>
   <div class="center-header">
-    <a href="#", class="header-list">釣果</a>
-    <a href="#", class="header-list">レシピ</a>
-    <a href="#", class="header-list">コラム</a>
+    <a href="#" class="header-list">釣果</a>
+    <a href="#" class="header-list">レシピ</a>
+    <a href="#" class="header-list">コラム</a>
   </div>
 
 
   <%# ログイン。マイページボタン %>
   <div class="header-rigth">
     <ul class="list-rigth">
-      <%# <% if user_signed_in?%>
-        <%# <li><%= link_to 'ユーザー名', "#", class: "user-nickname"%>
-        <%# <li><%= link_to 'ログアウト', "#", class: "logout" %>
-      <%# <% else%> 
+      <% if user_signed_in?%>
+        <li><%= link_to 'ユーザー名', "#", class: "user-nickname"%>
+        <li><%= link_to 'ログアウト',destroy_user_session_path, class: "logout" %>
+      <% else %>
         <li><%= link_to 'ログイン',user_session_path , class: "rogin" %></li>
         <li><%= link_to '新規登録',new_user_registration_path, class: "sign-in"%></li>
-      <%# <% end%> 
+      <% end %>
     </ul>
   </div>
 </header>
