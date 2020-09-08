@@ -2,10 +2,11 @@
 
 <div class="main">
  <div class="main-image">
+  <%= image_tag "top-image.jpg", class: "top-img"%>
  </div>
  <%# 釣果一覧表示 %>
  <div class="fish-catch-page">
-    <h1 class="list-title">釣果一覧</h1>
+    <h1 class="list-title"><span>釣果一覧</span></h1>
       <div class="pages">
         <li class="content-list">
           <h5 class="content-genre">ジャンル</h5>
@@ -37,7 +38,7 @@
 
  <%# レシピ一覧 %>
  <div class="recipe-pages">
-  <h1 class="list-title">料理一覧</h1>
+  <h1 class="list-title"><span>料理一覧</span></h1>
   <li class="content-list">
       <h3 class="content-title">レシピタイトル</h3>
           <%= image_tag "sample-recipe.jpg", class: "content-img"%>
@@ -46,7 +47,7 @@
  </div>
  <%# コラム一覧 %>
  <div class="colimn-pages">
-  <h1 class="list-title">コラム一覧</h1>
+  <h1 class="list-title"><span>コラム一覧</span></h1>
   <li class="content-list">
       <h3 class="content-title"> コラムタイトル</h3>
        <div class="content-img">

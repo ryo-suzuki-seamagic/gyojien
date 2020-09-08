@@ -1,11 +1,12 @@
 
 .main-page-header{
-  background-color: aqua;
+  background-color:#333333;
   height: 50px;
   width: 100vw;
   display: flex;
   margin-top: 0;
   position: fixed;
+  z-index: 100;
 }
 
 .logo{
@@ -20,6 +21,7 @@
   height: 100%;
   text-align: center;
   justify-content: center;
+  color:#99FFFF;
 }
 
 .center-header{
@@ -29,17 +31,57 @@
   /* margin-top: 20px; */
  }
  
- .header-list {
-  /* margin: 0 35px 0 35px; */
+ .header-list-fish-chath {
   padding: 0 70px;
   font-size: 30px;
   text-decoration: none;
-  border:1px solid blue ;
+  border-left:2px solid white ;
+  border-right:1px solid white ;
   text-align: center;
   justify-content: center;
+  color:#808080
+  
+}
+.header-list-fish-chath:hover{
+  background-color: #000066;
+  color: white;
+  transition:0.5s;
+
+}
+.header-list-recipe {
+  padding: 0 70px;
+  font-size: 30px;
+  text-decoration: none;
+  border-left:1px solid white ;
+  border-right:1px solid white ;
+  text-align: center;
+  justify-content: center;
+  color:#808080
+}
+.header-list-recipe:hover{
+  background-color: #880000	;
+  color: white;
+  transition:0.5s;
+}
+
+.header-list-coliumn {
+  padding: 0 70px;
+  font-size: 30px;
+  text-decoration: none;
+  border-left:1px solid white ;
+  border-right:2px solid white ;
+  text-align: center;
+  justify-content: center;
+  color:#808080
   
 }
 
+.header-list-coliumn:hover{
+  background-color: #003300;
+  color: white;
+  transition:0.5s;
+
+}
  
 .header-rigth{
  
@@ -54,11 +96,13 @@
 }
 
 .rogin{
-  border:1px solid blue ;
+  border:1px solid white ;
   font-size: 30px;
   height: 100%;
   text-decoration: none;
   width: 50%;
+  color:#808080
+
   /* padding: 30px 20px 30px 20px; */
 
 
@@ -66,11 +110,13 @@
 }
 
 .sign-in{
-  border:1px solid blue ;
+  border:1px solid white ;
   font-size: 30px;
   height: 100%;
   text-decoration: none;
   width: 50%;
+  color:#808080
+
   /* padding: 30px 20px 30px 20px; */
 
 }
