@@ -1,0 +1,52 @@
+.header-speace{
+  height: 50px;
+ 
+}
+
+.fichcatch-main{
+  background-color: cadetblue;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 120px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.fishcatch-form{
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.fishcatch-title{
+  font-size: 50px;
+  display:block;
+}
+.fishcatch-image{
+
+  display:block;
+}
+
+.select-box{
+  display:block;
+
+}
+
+.input{
+
+  display:block;
+}
+
+.fishcatch-text{
+  display:block;
+  height: 500px;
+  width: 50vw;
+
+}
+

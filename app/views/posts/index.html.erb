@@ -2,37 +2,20 @@
 
 <div class="main">
  <div class="main-image">
-  <%= image_tag "top-image.jpg", class: "top-img"%>
+  <%= image_tag "main-page.jpg", class: "top-img"%>
  </div>
  <%# 釣果一覧表示 %>
  <div class="fish-catch-page">
     <h1 class="list-title"><span>釣果一覧</span></h1>
       <div class="pages">
         <li class="content-list">
-          <h5 class="content-genre">ジャンル</h5>
-              <h3 class="content-title">釣果タイトル </h3>
-                <%= image_tag "sample-shake.jpg", class: "content-img"%>
-              <h5 class="content-user-name"> お名前</h5>
-        </li>
-        <li class="content-list">
-          <h5 class="content-genre">ジャンル</h5>
-              <h3 class="content-title">釣果タイトル </h3>
-                <%= image_tag "sample-shake.jpg", class: "content-img"%>
-              <h5 class="content-user-name"> お名前</h5>
-        </li>
-        <li class="content-list">
-          <h5 class="content-genre">ジャンル</h5>
-              <h3 class="content-title">釣果タイトル </h3>
-                <%= image_tag "sample-shake.jpg", class: "content-img"%>
-              <h5 class="content-user-name"> お名前</h5>
-        </li>
-        <li class="content-list">
-          <h5 class="content-genre">ジャンル</h5>
-              <h3 class="content-title">釣果タイトル </h3>
-                <%= image_tag "sample-shake.jpg", class: "content-img"%>
-              <h5 class="content-user-name"> お名前</h5>
-        </li>
-    
+          <% @fishcatches.each do |fish|%>
+            <h5 class="content-genre"><%= fish.location_id %></h5>
+                <h3 class="content-title"><%= fish.title %> </h3>
+                  <%= image_tag fish.image, class: "content-img" if fish.image.attached?%>
+                <h5 class="content-user-name"> <%= fish.user_id %></h5>
+              <% end%>
+        </li>    
       </div>
  </div>
 

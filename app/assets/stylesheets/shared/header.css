@@ -42,15 +42,17 @@
   justify-content: center;
   color:#808080;
   
-  
-  
 }
+
 .header-list-fish-chath:hover{
   background-color: #000066;
   color: white;
   transition:0.5s;
 
 }
+
+
+
 .header-list-recipe {
   width: 30%;
   font-size: 30px;

@@ -24,15 +24,16 @@
 
 ## usersテーブル
 
-| Coliumn   | Type   | Options     |
-| --------- | ------ | ----------- |
-| nickname  | string | null: false |
-| email     | string | null: false |
-| location  | string | null: false |
-| first_name | string | null: false |
-| last_name  | string | null: false |
-| password  | string | null: false |
-|           |        |             |
+| Coliumn     | Type    | Options     |
+| ----------- | ------- | ----------- |
+| nickname    | string  | null: false |
+| email       | string  | null: false |
+| location_id | integer | null: false |
+| first_name  | string  | null: false |
+| last_name   | string  | null: false |
+| password    | string  | null: false |
+| profile     | text    | null: true  |
+|             |         |             |
 
 ## Association
 
@@ -44,14 +45,15 @@
 
 ## fishcatchテーブル
 
-| Coliumn        | Type    | Options     |
-| -------------- | ------- | ----------- |
-| prefectures_id | integer | null:false  |
-| field_id       | integer | null:false  |
-| fish_name      | string  | null:true   |
-| fishingmethod  | string  | null:true   |
-| text           | string  | nulll:false |
-|                |         |             |
+| Coliumn        | Type       | Options                       |
+| -------------- | ---------- | ----------------------------- |
+| prefectures_id | integer    | null:false                    |
+| field_id       | integer    | null:false                    |
+| fish_name      | string     | null:true                     |
+| fishingmethod  | string     | null:true                     |
+| text           | text       | null:false                    |
+| user           | references | null:false, foreign_key: true |
+|                |            |                               |
 
 ## Association
 
@@ -60,12 +62,12 @@
 
 ## fishcatchcommentテーブル
 
-| Coliumn   | Type       | Options                      |
-| --------- | ---------- | ---------------------------- |
-| fishcatch | references | null:false, forgin_key: true |
-| user      | references | null:false, forgin_key: true |
-| text      | text       | null:false                   |
-|           |            |                              |
+| Coliumn   | Type       | Options                       |
+| --------- | ---------- | ----------------------------- |
+| fishcatch | references | null:false, forgin_key: true  |
+| user      | references | null:false, forgin_key: true  |
+| text      | text       | null:false                    |
+|           |            |                               |
 
 ### Association
 - belongs_to :user
@@ -73,12 +75,13 @@
 
 ## recipeテーブル
 
-| Coliumn          | Type    | Options    |
-| ---------------- | ------- | ---------- |
-| title            | string  | null:false |
-| fishname         | string  | null:false |
-| text             | text    | null:false |
-|                  |         |            |
+| Coliumn  | Type       | Options                       |
+| -------- | ---------- | ----------------------------- |
+| title    | string     | null:false                    |
+| fishname | string     | null:false                    |
+| text     | text       | null:false                    |
+| user     | references | null:false, foreign_key: true |
+|          |            |                               |
 
 ### Association
 - belongs_to :user
@@ -103,7 +106,7 @@
 | ------- | ---------- | ---------------------------- |
 | title   | string     | null:false                   |
 | blog    | rongbiob   | null:false                   |
-| user_id | references | null:false, forgin_key: true |
+| user    | references | null:false, forgin_key: true |
 |         |            |                              |
 - belongs_to :user
 

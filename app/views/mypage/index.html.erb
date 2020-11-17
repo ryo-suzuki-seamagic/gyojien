@@ -1,0 +1,52 @@
+<%= render "shared/header"%>
+
+<div class="mypage">
+<%# プロフィール %>
+  <div class="profile">
+    <div class="my-icon">
+      <%= image_tag "sample-icon.jpg", class: "icon"%>
+    </div>
+    <div class="my-nickname">
+      <p class="nickname">ユーザー名</p>
+      <%# @user.nickname class: "my-nickname"%>
+    </div>
+    <div class="my-location">
+      <p class="location">都道府県</p>
+      <%# @user.location class: "my-location"%>
+    </div>
+    <div class="my-profile">
+      <p class="my-pf">自己PR</p>
+       <h6>自己PRはありません</h6>
+      <%# @user.profile  class: "my-profile"%>
+    </div>
+
+    <div class="post-link">
+      <h4 class ="my-post-title">
+      <%= link_to '釣果投稿' , new_fishcatch_path , class: 'my-post-link'%> 
+       <%= link_to 'レシピ投稿' ,'#', class: 'my-post-link'%> 
+       <%= link_to 'コラム投稿' ,'#', class: 'my-post-link'%> 
+    </div>
+    <div class="my-post">
+      <div class="my-fish-catch">
+        <p class="my-fish-catch-title"><span class="point">--</span>釣果<span class="point">--</span></p>
+            <li class="content-list">
+             <% @fishcatches.each do |c|%>
+              <%# link_to fichcatch_path(fichcatch.id) %>
+                  <%= image_tag c.image, class: "post-img" if c.image.attached?%>
+            
+            
+              <h2 class="not-post">投稿はありません</h2>
+            <%end%>
+      </div>
+      <div class="my-recipe">
+        <p class="my-recipe-title"><span class="point">--</span>レシピ<span class="point">--</span></p>
+          <h2 class="not-post">投稿はありません</h2>
+      </div>
+      <div class="my-colimn">
+        <p class="my-colimn-title"><span class="point">--</span>コラム<span class="point">--</span></p>
+          <h2 class="not-post">投稿はありません</h2>
+      </div>
+    </div>
+  </div>
+</div>
+

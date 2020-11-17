@@ -1,0 +1,119 @@
+.mypage{
+  background-color: #66CCFF;
+  height: 100%;
+  width: 100vw;
+  padding-top: 120px;
+
+}
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icon{
+  margin-top: 80px;
+  height: 350px;
+  width: 350px;
+  border-radius: 175px 175px 175px 175px;
+}
+
+.my-nickname{
+  height: 80px;
+  width: 500px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.my-location{
+  height: 80px;
+  width: 500px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.my-profile{
+  height: 80px;
+  width: 500px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.post-link{
+  display: flex;
+  margin-top: 50px;
+
+}
+
+.my-post-link{
+  font-size: 30px;
+  margin: 0 25px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.my-post{
+  margin-top: 80px;
+  /* background-color: cornsilk; */
+  margin-bottom: 80px;
+}
+
+.my-fish-catch{
+  height: 240px;
+  width:80vw;
+  text-align: center;
+
+}
+
+.my-recipe{
+  height: 240px;
+  width:80vw;
+  margin-top: 30px;
+  text-align: center;
+
+
+}
+
+.my-colimn{
+  height: 240px;
+  width:80vw;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  text-align: center;
+
+
+}
+
+.point{
+  font-size: 40px;
+  margin: 0 40px;
+  color: #000066;
+}
+
+.my-fish-catch-title{
+  font-size: 30px;
+  color: #000066;
+}
+
+.post-img{
+  height: 50px;
+  width: 65px;
+}
+
+.my-recipe-title{
+  font-size: 30px;
+  color: #880000;
+
+}
+
+.my-colimn-title{
+  font-size: 30px;
+  color:#003300;
+}
+
+.not-post {
+  text-align: center;
+  margin: 40px 0;
+}
