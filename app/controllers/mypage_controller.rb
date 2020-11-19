@@ -1,7 +1,7 @@
 class MypageController < ApplicationController
 
-  def index
-    @user = User.all
+  def show
+    @user = User.find(params[:user_id])
     @fishcatches = Fishcatch.all.order('created_at DESC')
   end
 

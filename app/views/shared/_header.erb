@@ -19,7 +19,7 @@
   <% if user_signed_in? %>
     <ul class="user-name", id="header-user-name"><%= link_to 'ユーザー名',"#", class: "session"%><ul>
       <ul class="user-name-pulldown hidden", id="user-pulldown">
-        <li class="user-name-list"><%= link_to'マイページ',mypage_index_path, class:"session"%></li>
+        <li class="user-name-list"><%= link_to'マイページ',mypage_path(:user_id), class:"session"%></li>
         <li class="user-name-list">投稿一覧</li>
         <li class="user-name-list"><%= link_to'ログアウト',destroy_user_session_path, method: :delete, class:"session"%></li>
       </ul>

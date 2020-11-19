@@ -21,22 +21,26 @@
     </div>
 
     <div class="post-link">
-      <h4 class ="my-post-title">
-      <%= link_to '釣果投稿' , new_fishcatch_path , class: 'my-post-link'%> 
+      <h4 class="my-post-title">
+      <%= link_to '釣果投稿' , new_mypage_fishcatch_path , class: 'my-post-link'%> 
        <%= link_to 'レシピ投稿' ,'#', class: 'my-post-link'%> 
        <%= link_to 'コラム投稿' ,'#', class: 'my-post-link'%> 
     </div>
     <div class="my-post">
       <div class="my-fish-catch">
         <p class="my-fish-catch-title"><span class="point">--</span>釣果<span class="point">--</span></p>
+          <div class="my-post-fhsh-catch">
             <li class="content-list">
+            <% if @fishcatches.empty? != nil %>
              <% @fishcatches.each do |c|%>
-              <%# link_to fichcatch_path(fichcatch.id) %>
+                <% link_to fishcatch_path(c.id) %>
+                  <h3 class="content-title"><%= c.title %> </h3>
                   <%= image_tag c.image, class: "post-img" if c.image.attached?%>
-            
-            
+                <%end%>
+              <% else %>
               <h2 class="not-post">投稿はありません</h2>
-            <%end%>
+              <% end %>
+          </div>
       </div>
       <div class="my-recipe">
         <p class="my-recipe-title"><span class="point">--</span>レシピ<span class="point">--</span></p>

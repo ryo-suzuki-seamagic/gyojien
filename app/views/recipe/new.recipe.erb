@@ -1,0 +1,25 @@
+<%= render "shared/header" ,class:'header'%>
+
+<div class="header-speace">
+</div>
+
+<div class="recipe-main">
+   
+
+  <div class="fishcatch-form">
+    <%= form_with model: @fishcatch, url: fishcatch_index_path , local: true do |f| %>
+    <h2 class="fishcatch-title">レシピ投稿</h2>
+      <%= f.file_field :image, id:"fishcatch-image", class:"fishcatch-image"%>
+      <%= f.text_field :title, class:"input", id:"title", placeholder:"タイトル"%>
+      <%= f.collection_select(:location_id, Location.all, :id, :name, {}, {class:"select-box", id:"fishcatch-location"}) %>
+      <%= f.collection_select(:field_id, Field.all, :id, :name, {}, {class:"select-box", id:"fishcatch-field"}) %>
+      <%= f.text_field :fish_name, class:"input", id:"fish-name", placeholder:"例)アジ・サバ" %>
+      <%= f.text_field :fishingmethod, class:"input", id:"fishingmethod", placeholder:"例)ルアー。フカセ" %>
+      <%= f.text_area :text, class:"fishcatch-text", id:"text" %>
+       <%= f.submit "投稿する" ,class:"sell-btn" %>
+    <% end %>
+  </div>
+
+
+  
+</div>
