@@ -2,7 +2,7 @@
  
 <%# <div class="header-list"> %>
   <div class="header-left">
-  <a heaf="/" class="logo">魚辞苑 </a>
+  <a >  <%= link_to'魚辞苑',root_path ,class: "logo"%></a>
   </div>
   <div class="center-header">
     <ul class="header-list-fish-chath", id="header-fish-catch">釣  果</ul>
@@ -17,9 +17,9 @@
       </ul>
     <ul class="header-list-coliumn", id="header-colium">コラム</ul>
   <% if user_signed_in? %>
-    <ul class="user-name", id="header-user-name"><%= link_to 'ユーザー名',"#", class: "session"%><ul>
+    <ul class="user-name", id="header-user-name"><%= link_to current_user.nickname ,"#", class: "session"%><ul>
       <ul class="user-name-pulldown hidden", id="user-pulldown">
-        <li class="user-name-list"><%= link_to'マイページ',mypage_path(:user_id), class:"session"%></li>
+        <li class="user-name-list"><%= link_to'マイページ',user_path(current_user.id), class:"session"%></li>
         <li class="user-name-list">投稿一覧</li>
         <li class="user-name-list"><%= link_to'ログアウト',destroy_user_session_path, method: :delete, class:"session"%></li>
       </ul>

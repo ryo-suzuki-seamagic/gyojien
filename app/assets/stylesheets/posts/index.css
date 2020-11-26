@@ -46,7 +46,7 @@
 
 .pages{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height:400px;
   
 }

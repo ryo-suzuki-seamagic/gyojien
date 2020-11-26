@@ -64,13 +64,16 @@
   height: 240px;
   width:80vw;
   text-align: center;
+}
 
+.my-post-fhsh-catch{
+  display: flex;
 }
 
 .my-recipe{
   height: 240px;
   width:80vw;
-  margin-top: 30px;
+  margin-top: 150px;
   text-align: center;
 
 
@@ -98,8 +101,8 @@
 }
 
 .post-img{
-  height: 50px;
-  width: 65px;
+  height: 140px;
+  width: 180px;
 }
 
 .my-recipe-title{
@@ -116,4 +119,12 @@
 .not-post {
   text-align: center;
   margin: 40px 0;
+}
+
+.content-list{
+  border:1px solid blue ;
+  padding: 20px 28px;
+  border-radius: 40px 40px 40px 40px;
+  background-color:paleturquoise;
+
 }

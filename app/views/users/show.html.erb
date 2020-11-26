@@ -4,11 +4,11 @@
 <%# プロフィール %>
   <div class="profile">
     <div class="my-icon">
-      <%= image_tag "sample-icon.jpg", class: "icon"%>
+      <%= image_tag @user.image, class: "icon" if @user.image.attached?%>
+
     </div>
     <div class="my-nickname">
-      <p class="nickname">ユーザー名</p>
-      <%# @user.nickname class: "my-nickname"%>
+      <p class="nickname"><%=@user.nickname%></p>
     </div>
     <div class="my-location">
       <p class="location">都道府県</p>
@@ -22,22 +22,22 @@
 
     <div class="post-link">
       <h4 class="my-post-title">
-      <%= link_to '釣果投稿' , new_mypage_fishcatch_path , class: 'my-post-link'%> 
-       <%= link_to 'レシピ投稿' ,'#', class: 'my-post-link'%> 
-       <%= link_to 'コラム投稿' ,'#', class: 'my-post-link'%> 
+      <%= link_to '釣果投稿' , new_fishcatch_path , class: 'my-post-link'%> 
+       <%= link_to 'レシピ投稿' ,new_recipe_path, class: 'my-post-link'%> 
+       <%= link_to 'コラム投稿' ,new_blog_path, class: 'my-post-link'%> 
     </div>
     <div class="my-post">
       <div class="my-fish-catch">
         <p class="my-fish-catch-title"><span class="point">--</span>釣果<span class="point">--</span></p>
           <div class="my-post-fhsh-catch">
-            <li class="content-list">
-            <% if @fishcatches.empty? != nil %>
-             <% @fishcatches.each do |c|%>
-                <% link_to fishcatch_path(c.id) %>
-                  <h3 class="content-title"><%= c.title %> </h3>
-                  <%= image_tag c.image, class: "post-img" if c.image.attached?%>
-                <%end%>
-              <% else %>
+              <% if @fishcatches.empty? != nil %>
+                <% @fishcatches.each do |c|%>
+                  <li class="content-list">
+                    <% link_to fishcatch_path(c.id) %>
+                      <h3 class="content-title"><%= c.title %> </h3>
+                      <%= image_tag c.image, class: "post-img" if c.image.attached?%>
+                  <%end%>
+                <% else %>
               <h2 class="not-post">投稿はありません</h2>
               <% end %>
           </div>

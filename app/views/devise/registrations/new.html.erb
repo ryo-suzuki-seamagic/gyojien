@@ -4,7 +4,7 @@
   <div class="form-box">
     <h2 class="sign-up-title">新規登録</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "users/shared/error_messages", resource: resource %>
+        <%= render "devise/shared/error_messages", resource: resource %>
           <div class="sign-up-box">
             <div class="field">
               <h3 class="form-title">アイコン</h3>
