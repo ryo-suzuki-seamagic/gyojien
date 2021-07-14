@@ -66,7 +66,7 @@
   text-align: center;
 }
 
-.my-post-fhsh-catch{
+.my-posts{
   display: flex;
 }
 
@@ -82,7 +82,7 @@
 .my-colimn{
   height: 240px;
   width:80vw;
-  margin-top: 30px;
+  margin-top: 150px;
   margin-bottom: 100px;
   text-align: center;
 

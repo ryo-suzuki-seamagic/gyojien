@@ -24,14 +24,14 @@
       <h4 class="my-post-title">
       <%= link_to '釣果投稿' , new_fishcatch_path , class: 'my-post-link'%> 
        <%= link_to 'レシピ投稿' ,new_recipe_path, class: 'my-post-link'%> 
-       <%= link_to 'コラム投稿' ,new_blog_path, class: 'my-post-link'%> 
+       <%= link_to 'コラム投稿' ,new_colimn_path, class: 'my-post-link'%> 
     </div>
     <div class="my-post">
       <div class="my-fish-catch">
         <p class="my-fish-catch-title"><span class="point">--</span>釣果<span class="point">--</span></p>
-          <div class="my-post-fhsh-catch">
-              <% if @fishcatches.empty? != nil %>
-                <% @fishcatches.each do |c|%>
+          <div class="my-posts">
+              <% if @fishcatche.empty? != nil %>
+                <% @fishcatche.each do |c|%>
                   <li class="content-list">
                     <% link_to fishcatch_path(c.id) %>
                       <h3 class="content-title"><%= c.title %> </h3>
@@ -44,7 +44,17 @@
       </div>
       <div class="my-recipe">
         <p class="my-recipe-title"><span class="point">--</span>レシピ<span class="point">--</span></p>
-          <h2 class="not-post">投稿はありません</h2>
+          <div class="my-posts">
+            <% if @recipe.empty? != nil %>
+              <% @recipe.each do |recipe|%>
+                <li class="content-list">
+                  <h3 class="content-title"><%= recipe.title %> </h3>
+                        <%= image_tag recipe.image, class: "post-img" if recipe.image.attached?%>
+                    <%end%>
+                  <% else %>
+                <h2 class="not-post">投稿はありません</h2>
+            <% end %>
+          </div>
       </div>
       <div class="my-colimn">
         <p class="my-colimn-title"><span class="point">--</span>コラム<span class="point">--</span></p>

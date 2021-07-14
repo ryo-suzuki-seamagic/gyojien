@@ -1,0 +1,21 @@
+<%= render "shared/header" ,class:'header'%>
+
+<div class="header-speace">
+</div>
+
+<div class="colimu-main">
+   
+
+  <div class="colimu-form">
+    <%= form_with model: @colimu, url:colimn_index_path  , local: true do |f| %>
+    <h2 class="fishcatch-title">コラム投稿</h2>
+      <%= f.file_field :image, id:"colimu-image", class:"colimu-image"%>
+      <%= f.text_field :title, class:"input", id:"title", placeholder:"タイトル"%>
+      <%= f.rich_text_area :blog %>
+       <%= f.submit "投稿する" ,class:"sell-btn" %>
+    <% end %>
+  </div>
+
+
+  
+</div>

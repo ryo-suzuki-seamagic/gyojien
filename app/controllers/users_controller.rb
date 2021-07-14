@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @fishcatches = Fishcatch.all
+    @fishcatche = Fishcatch.all
+    @recipe = Recipe.all
   end
 
 end   

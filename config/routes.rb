@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     resources :users, only: :show
     resources :fishcatch 
     resources :recipe
+    resources :colimn
 end

@@ -8,12 +8,12 @@
  <div class="fish-catch-page">
     <h1 class="list-title"><span>釣果一覧</span></h1>
       <div class="pages">
-        <li class="content-list">
           <% @fishcatches.each do |fish|%>
-            <h5 class="content-genre"><%= fish.location_id %></h5>
-                <h3 class="content-title"><%= fish.title %> </h3>
-                  <%= image_tag fish.image, class: "content-img" if fish.image.attached?%>
-                <h5 class="content-user-name"> <%= fish.user_id %></h5>
+            <li class="content-list">
+              <h5 class="content-genre"><%= fish.location_id %></h5>
+                  <h3 class="content-title"><%= fish.title %> </h3>
+                    <%= image_tag fish.image, class: "content-img" if fish.image.attached?%>
+                  <h5 class="content-user-name"> <%= fish.user_id %></h5>
               <% end%>
         </li>    
       </div>
@@ -22,22 +22,26 @@
  <%# レシピ一覧 %>
  <div class="recipe-pages">
   <h1 class="list-title"><span>料理一覧</span></h1>
-  <li class="content-list">
-      <h3 class="content-title">レシピタイトル</h3>
-          <%= image_tag "sample-recipe.jpg", class: "content-img"%>
-          <h5 class="content-user-name"> お名前</h5>   
-  </li>
- </div>
+      <div class="pages">
+          <% @recipes.each do |recipe|%>
+            <li class="content-list">
+                  <h3 class="content-title"><%= recipe.title %> </h3>
+                    <%= image_tag recipe.image, class: "content-img" if recipe.image.attached?%>
+                  <h5 class="content-user-name"> <%= recipe.user_id %></h5>
+              <% end%>
+        </li>    
+      </div> </div>
  <%# コラム一覧 %>
  <div class="colimn-pages">
   <h1 class="list-title"><span>コラム一覧</span></h1>
-  <li class="content-list">
-      <h3 class="content-title"> コラムタイトル</h3>
-       <div class="content-img">
-       </div>
-       <div class="content-user-name">
-       </div>
-    </li>
- </div>
+<div class="pages">
+          <% @colimns.each do |colimn|%>
+            <li class="content-list">
+                  <h3 class="content-title"><%= colimn.title %> </h3>
+                    <%= image_tag colimn.image, class: "content-img" if colimn.image.attached?%>
+                  <h5 class="content-user-name"> <%= colimn.user_id %></h5>
+              <% end%>
+        </li>    
+     </div>
 
 <%= render "shared/footer"%>
